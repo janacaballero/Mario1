@@ -1,3 +1,10 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://bg-1-1-a.png" type="Texture" id=1]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Bg-1-1-a" type="Sprite" parent="."]
+position = Vector2( 0, 300 )
+scale = Vector2( 2.67857, 2.67857 )
+texture = ExtResource( 1 )
