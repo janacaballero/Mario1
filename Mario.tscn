@@ -9,6 +9,7 @@ height = 28.0
 [node name="KinematicBody2D" type="KinematicBody2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+current = true
 limit_left = -9999998
 limit_top = 0
 limit_bottom = 600
