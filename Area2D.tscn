@@ -13,10 +13,4 @@ script = ExtResource( 1 )
 position = Vector2( -1, 10 )
 shape = SubResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -21.0
-margin_top = 1.0
-margin_right = 19.0
-margin_bottom = 20.0
-
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
