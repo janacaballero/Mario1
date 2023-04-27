@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GradientTexture2D" id=1]
+
+[node name="fons4" type="Sprite"]
+position = Vector2( -166.5, 796 )
+scale = Vector2( 147.547, 6.03125 )
+texture = SubResource( 1 )
