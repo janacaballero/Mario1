@@ -22,6 +22,7 @@ func _process(delta):
 	moviment += gravetat * delta
 	
 	moviment = move_and_slide(moviment, Vector2.UP)
-	
-	
-	
+
+
+func _on_CastellFinal_body_entered(body):
+	print ('fi')
