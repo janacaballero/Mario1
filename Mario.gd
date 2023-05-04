@@ -3,7 +3,7 @@ var velocitat := 1000
 var moviment := Vector2.ZERO
 var gravetat := Vector2.DOWN *600
 var direccio := Vector2.ZERO
-var salt := 450
+var salt := 320
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
