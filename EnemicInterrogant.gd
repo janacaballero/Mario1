@@ -10,3 +10,10 @@ func _process(delta):
 		
 	moviment += gravetat * delta
 	moviment = move_and_slide(moviment, Vector2.ZERO)
+
+
+	
+
+
+func _on_EnemicInterrogant_tree_entered():
+	moviment = moviment * -1
