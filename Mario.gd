@@ -23,3 +23,5 @@ func _process(delta):
 	
 	moviment = move_and_slide(moviment, Vector2.UP)
 	
+	
+	
