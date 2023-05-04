@@ -11,3 +11,7 @@ func _on_AreaInterrogant_body_entered(body, posicio):
 	nou_enemic.global_position = posicio
 	Global.Enemics.add_child(nou_enemic)
 	
+
+
+func _on_Timer_timeout():
+	pass # Replace with function body.
