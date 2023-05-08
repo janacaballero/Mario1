@@ -5,9 +5,6 @@ var gravetat := Vector2.DOWN *600
 var direccio := Vector2.ZERO
 var salt := 320
 
-func _ready():
-	pass
-
 func _process(delta):
 	if Input.is_action_pressed("saltar") and is_on_floor():
 		moviment.y = -salt
