@@ -9,7 +9,7 @@ func _on_AreaInterrogant_body_entered(body, posicio):
 	print (posicio)
 	var nou_enemic = Escena_EnemicInterrogant.instance()
 	nou_enemic.global_position = posicio
-	Global.Enemics.add_child(nou_enemic)
+	Global.Enemics.call_deferred("add_child", nou_enemic)
 	
 
 

@@ -1,15 +1,14 @@
 extends KinematicBody2D
-var velocitat := 1000
+var velocitat := 200
 var moviment := Vector2.ZERO
 var gravetat := Vector2.DOWN *1000
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	moviment.x = 200 
+func _ready():
+	moviment.x = velocitat
 	moviment.y = 0
-		
+	
+func _process(delta):
 	moviment += gravetat * delta
-	moviment = move_and_slide(moviment, Vector2.ZERO)
+	moviment = move_and_slide(moviment, Vector2.UP)
 
-func _on_EnemicInterrogant_tree_entered():
-	moviment.x = moviment.x * -1
+	
