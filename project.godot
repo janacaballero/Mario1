@@ -62,6 +62,12 @@ jump={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Mario"
+2d_physics/layer_2="Terra"
+2d_physics/layer_3="Enemics"
+
 [physics]
 
 common/enable_pause_aware_picking=true

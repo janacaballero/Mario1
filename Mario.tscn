@@ -6,6 +6,7 @@
 extents = Vector2( 30.5, 49 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+collision_mask = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
