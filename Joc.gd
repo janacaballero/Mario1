@@ -12,4 +12,4 @@ func _on_AreaInterrogant_body_entered(body, posicio):
 	Global.Enemics.call_deferred("add_child", nou_enemic)
 
 func _on_Timer_timeout():
-	pass # Replace with function body.
+	pass # Replace with function body
