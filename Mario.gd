@@ -9,6 +9,7 @@ func _process(delta):
 	if Input.is_action_pressed("saltar") and is_on_floor():
 		moviment.y = -salt
 	elif Input.is_action_pressed("endavant"):
+		$Sprite.play("Camina")
 		moviment.x = 300
 	elif Input.is_action_pressed("endarrere"):
 		moviment.x = -300
