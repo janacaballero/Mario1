@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://bg-1-1-a.png" type="Texture" id=1]
 [ext_resource path="res://terra.tscn" type="PackedScene" id=2]
@@ -9,8 +9,13 @@
 [ext_resource path="res://Mario.gd" type="Script" id=7]
 [ext_resource path="res://fons.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Joc.gd" type="Script" id=9]
+[ext_resource path="res://title.png" type="Texture" id=10]
 [ext_resource path="res://Enemics.gd" type="Script" id=11]
 [ext_resource path="res://final.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Pantalla_inici.gd" type="Script" id=13]
+[ext_resource path="res://bla.jpg" type="Texture" id=14]
+
+[sub_resource type="DynamicFont" id=1]
 
 [node name="Joc" type="Node2D"]
 script = ExtResource( 9 )
@@ -62,6 +67,27 @@ script = ExtResource( 11 )
 [node name="CastellFinal" parent="." instance=ExtResource( 12 )]
 position = Vector2( 4371, 370 )
 scale = Vector2( 0.25, 0.25 )
+
+[node name="Bla" type="Sprite" parent="."]
+position = Vector2( -6764, -1570 )
+scale = Vector2( 1.62, 1.60345 )
+texture = ExtResource( 14 )
+
+[node name="Camera2D" type="Camera2D" parent="Bla"]
+position = Vector2( -453.704, -283.763 )
+current = true
+zoom = Vector2( 0.18, 0.18 )
+
+[node name="Pantalla_inici" type="Sprite" parent="Bla"]
+position = Vector2( -466.05, -278.15 )
+scale = Vector2( 3.06129, 3.52598 )
+texture = ExtResource( 10 )
+script = ExtResource( 13 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Bla"]
+margin_right = 372.0
+margin_bottom = 142.0
+custom_fonts/mono_font = SubResource( 1 )
 
 [connection signal="item_rect_changed" from="mario" to="mario" method="_on_mario_item_rect_changed"]
 [connection signal="body_entered" from="CastellFinal" to="mario" method="_on_CastellFinal_body_entered"]
