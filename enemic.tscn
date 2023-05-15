@@ -12,7 +12,7 @@ extents = Vector2( 10, 20 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 21 )
 
-[node name="KinematicBody2D2" type="KinematicBody2D"]
+[node name="Enemic" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -38,3 +38,6 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DEsquerra"]
 position = Vector2( -15, 1 )
 shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2DDreta" to="." method="_on_Area2DDreta_body_entered"]
+[connection signal="body_entered" from="Area2DEsquerra" to="." method="_on_Area2DEsquerra_body_entered"]
