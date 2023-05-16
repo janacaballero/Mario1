@@ -32,7 +32,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 19.5, 32.5 )
+extents = Vector2( 22.5, 32.5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 collision_mask = 2
@@ -47,11 +47,11 @@ editor_draw_limits = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 9.53674e-07, 9.53674e-07 )
-scale = Vector2( 0.2625, 0.28125 )
+scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 6 )
 animation = "Camina"
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -0.5 )
+position = Vector2( -1.5, -0.5 )
 shape = SubResource( 1 )

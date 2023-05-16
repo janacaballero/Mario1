@@ -9,22 +9,14 @@ func _ready():
 	
 func _process(delta):
 	moviment += gravetat * delta
-	print(moviment)
 	moviment = move_and_slide(moviment, Vector2.UP)
 
 func _on_Area2DDreta_area_entered(area):
 	moviment.x = -200
 
-func _on_Area2DEsquerra_area_entered(area):
-	pass
-
-
 func _on_Area2DDreta_body_entered(body):
 	if body.is_in_group("terra"):
 		moviment.x = -200
-	if body.is_in_group("mario"):
-		pass
-		
 
 func _on_Area2DEsquerra_body_entered(body):
 	if body.is_in_group("terra"):
