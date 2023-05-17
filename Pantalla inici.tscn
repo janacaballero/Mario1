@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://title.png" type="Texture" id=1]
+[ext_resource path="res://bla.jpg" type="Texture" id=2]
+[ext_resource path="res://Pantalla_inici.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+[node name="Bla" type="Sprite"]
+position = Vector2( -6976.9, -1811.41 )
+scale = Vector2( 1.36655, 1.14363 )
+texture = ExtResource( 2 )
+
+[node name="Pantalla_inici" type="Sprite" parent="."]
+position = Vector2( -466.05, -278.15 )
+scale = Vector2( 3.06129, 3.52598 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 372.0
+margin_bottom = 142.0
+custom_fonts/mono_font = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -46.9136, -1.87097 )
+zoom = Vector2( 2, 2 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
