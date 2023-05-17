@@ -6,6 +6,8 @@ var direccio := Vector2.ZERO
 var salt := 350
 
 func _process(delta):
+	if Global.comenca == 1:
+		$Camera2D.current = true
 	if Input.is_action_pressed("saltar") and is_on_floor():
 		moviment.y = -salt
 	elif Input.is_action_pressed("endavant"):
