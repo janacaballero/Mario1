@@ -37,7 +37,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31, 40.5 )
+extents = Vector2( 31, 32 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 collision_mask = 2
