@@ -17,3 +17,5 @@ func crea_interrogant(posicio):
 	var nou_interrogant = escena_interrogant.instance()
 	position = posicio
 	$TileMap.add_child(nou_interrogant)
+
+

@@ -94,5 +94,8 @@ stream = ExtResource( 7 )
 volume_db = 3.714
 autoplay = true
 
+[node name="Pantalla Final" type="Node2D" parent="."]
+position = Vector2( -4344, 240 )
+
 [connection signal="item_rect_changed" from="mario" to="mario" method="_on_mario_item_rect_changed"]
 [connection signal="body_entered" from="CastellFinal" to="mario" method="_on_CastellFinal_body_entered"]
