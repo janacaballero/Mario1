@@ -11,10 +11,15 @@ func _process(delta):
 	elif Input.is_action_pressed("endavant"):
 		$Sprite.play("Camina")
 		moviment.x = 300
+		get_node("Sprite").flip_h = false
 	elif Input.is_action_pressed("endarrere"):
 		moviment.x = -300
+		$Sprite.play("Camina")
+		get_node("Sprite").flip_h = true
 	else:
 		moviment.x = 0
+		$Sprite.play("parat")
+		
 
 	moviment += gravetat * delta
 	

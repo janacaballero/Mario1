@@ -29,10 +29,15 @@ animations = [ {
 "loop": true,
 "name": "Camina",
 "speed": 8.0
+}, {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "parat",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 22.5, 32.5 )
+extents = Vector2( 31, 40.5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 collision_mask = 2
@@ -50,8 +55,7 @@ editor_draw_drag_margin = true
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 6 )
-animation = "Camina"
-frame = 2
+animation = "parat"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
