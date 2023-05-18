@@ -21,8 +21,6 @@ func _on_Area2DDreta_body_entered(body):
 func _on_Area2DEsquerra_body_entered(body):
 	if body.is_in_group("terra"):
 		moviment.x = 200
-		
-
 
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if(body.is_in_group('mario')):
