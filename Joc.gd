@@ -1,14 +1,12 @@
 extends Node2D
 var Escena_EnemicInterrogant := preload("res://EnemicInterrogant.tscn")
 
-func _physics_process(delta):
-	$AudioStreamPlayer2D.play()
 
 func _ready():
 	Global.Joc = self
 	for posicio in $TileMap.get_used_cells_by_id(7):
 		crea_interrogant($TileMap.map_to_world(posicio))
-	
+
 
 # warning-ignore:unused_argument
 func _on_AreaInterrogant_body_entered(body, posicio):
