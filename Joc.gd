@@ -1,6 +1,8 @@
 extends Node2D
 var Escena_EnemicInterrogant := preload("res://EnemicInterrogant.tscn")
 
+func _physics_process(delta):
+	$AudioStreamPlayer2D.play()
 
 func _ready():
 	Global.Joc = self
