@@ -23,5 +23,5 @@ func _on_Area2DEsquerra_body_entered(body):
 		moviment.x = 200
 
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if(body.is_in_group('mario')):
+	if(body.is_in_group('mario')) and is_on_floor():
 		get_tree().reload_current_scene()
