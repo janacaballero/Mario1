@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Mario.gd" type="Script" id=1]
+[ext_resource path="res://Mario.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 160, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 160, 160, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 320, 160, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 480, 160, 160, 160 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "Camina",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "parat",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31, 32 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -164, -537 )
+anchor_mode = 0
+current = true
+limit_top = 140
+limit_bottom = 1000
+drag_margin_top = 0.75
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 6 )
+animation = "parat"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

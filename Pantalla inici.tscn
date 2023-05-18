@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://title.png" type="Texture" id=1]
+[ext_resource path="res://bla.jpg" type="Texture" id=2]
+[ext_resource path="res://Pantalla_inici.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Super Mario Bros..ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Pantalla inici.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 38
+font_data = ExtResource( 4 )
+
+[node name="Bla" type="Sprite"]
+position = Vector2( -7026, -1793 )
+scale = Vector2( 1.36655, 1.14363 )
+texture = ExtResource( 2 )
+script = ExtResource( 5 )
+
+[node name="Pantalla_inici" type="Sprite" parent="."]
+position = Vector2( -466.05, -278.15 )
+scale = Vector2( 3.06129, 3.52598 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -308.88
+margin_top = 248.691
+margin_right = 200.12
+margin_bottom = 280.691
+custom_colors/font_color = Color( 0.0941176, 0.0784314, 0.0784314, 1 )
+custom_colors/font_outline_modulate = Color( 0.0941176, 0.0784314, 0.0784314, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Press space to start"
+
+[node name="camera1" type="Camera2D" parent="."]
+position = Vector2( -46.9136, -1.87097 )
+zoom = Vector2( 2, 2 )
